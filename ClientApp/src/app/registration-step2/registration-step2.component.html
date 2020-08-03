@@ -1,0 +1,470 @@
+<p>registration-step2 works!</p>
+<div class="stepsContainer">
+
+
+    <div class="stepCircle" [ngStyle]="{'background': stepOne ? 'green':'lightgrey'}">
+      1
+    </div>
+    
+    <div class="stepConectorPiece" [ngStyle]="{'background': stepOne ? 'green':'lightgrey'}"></div>
+    
+    <div class="stepCircle" [ngStyle]="{'background': stepTwo ? 'green' : 'lightgrey'}">
+      2
+    </div>
+    
+    <div class="stepConectorPiece" [ngStyle]="{'background': stepTwo ? 'green' : 'lightgrey'}"></div>
+    
+    
+    <div class="stepCircle" [ngStyle]="{'background': stepThree ? 'green':'lightgrey'}">
+      3
+    </div>
+    </div>
+  
+    
+    <div class="container" *ngIf="personalInfoComplete">
+      <!-- <div class="one">
+        <div class="row">
+       <div class="col-md-4">
+        <label>ข้าพเจ้า</label>
+      </div>
+  
+        <div class="col-md-8 "  >
+        <p>{{name}}</p>
+              </div>
+       </div>
+      </div>
+      <div class="two">
+        <input type="text" 
+               class="input"
+               placeholder="Phone Number"
+               [(ngModel)]="phoneNumber">
+      </div>
+      <div class="three">
+        <input type="text" 
+               class="input"
+               placeholder="Email"
+               [(ngModel)]="email">
+      </div> -->
+
+  <main role="main"  style="margin-top:10px;">
+        <div class="card-body">
+              <div class="card">
+                  <div class="card-header" style="font-family: K2D; background-color: #649568;"> 
+                      <strong>ข้อมูลรายละเอียด คำขอนำเข้ายา</strong>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p style="font-family: K2D;"><strong>ชื่อผู้ยื่นคำขอ : </strong></p>
+                        </div>
+                        <div class="col-md-9">
+                            <!-- <p style="font-family: K2D;">{{IdentifiesCtzNo}}</p> -->
+                            <p style="font-family: K2D;">นางสาว ณัฏฐ์ ลีลาวัฒนานันท์</p>
+                        </div>
+                    </div>
+  
+                    <div class="row">
+                      <div class="col-md-3">
+                          <p style="font-family: K2D;"><strong>อายุ : </strong></p>
+                      </div>
+                      <div class="col-md-9">
+                          <!-- <p style="font-family: K2D;">{{IdentifiesCtzNo}}</p> -->
+                          <p style="font-family: K2D;">25 ปี</p>
+                      </div>
+                  </div>
+  
+                  <div class="row">
+                    <div class="col-md-3">
+                        <p style="font-family: K2D;"><strong>สัญชาติ : </strong></p>
+                    </div>
+                    <div class="col-md-9">
+                        <!-- <p style="font-family: K2D;">{{IdentifiesCtzNo}}</p> -->
+                        <p style="font-family: K2D;">ไทย</p>
+                    </div>
+                </div>
+  
+                <div class="row">
+                  <div class="col-md-3">
+                      <p style="font-family: K2D;"><strong>บัตรประจำตัวประชาชน/ บัตรประจำตัวข้าราชการ เลขที่ : </strong></p>
+                  </div>
+                  <div class="col-md-9">
+                      <!-- <p style="font-family: K2D;">{{IdentifiesCtzNo}}</p> -->
+                      <p style="font-family: K2D;">0000000000000</p>
+                  </div>
+              </div>
+  
+              <div class="row">
+                <div class="col-md-3">
+                    <p style="font-family: K2D;"><strong>ออกให้ ณ : </strong></p>
+                </div>
+                <div class="col-md-9">
+                    <!-- <p style="font-family: K2D;">{{IdentifiesCtzNo}}</p> -->
+                    <p style="font-family: K2D;">11 พ.ค. 2562</p>
+                </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-md-3">
+                  <p style="font-family: K2D;"><strong>ผู้มีอำนาจ/ ผู้รับมอบอำนาจของ (หน่วยงานที่มอบอำนาจ): </strong></p>
+              </div>
+              <div class="col-md-9">
+                  <!-- <p style="font-family: K2D;">{{IdentifiesCtzNo}}</p> -->
+                  <p style="font-family: K2D;">หน่วยงาน XXX </p>
+              </div>
+          </div>
+ 
+          <div class="row">   
+            <div class="col-md-3">
+              <p style="font-family: K2D;"><strong> โดยมี (ชื่อผู้มีอำนาจของหน่วยงาน) : </strong></p>
+          </div>
+    
+            <div class="col-md-9">
+                <!-- <p style="font-family: K2D;">{{IdentifiesCtzNo}}</p> -->
+                <p style="font-family: K2D;">นาย ทดสอบ ทดสอบ</p>
+            </div>
+        </div>
+  
+          <div class="row">
+            <div class="col-md-3">
+                <p style="font-family: K2D;"><strong>เป็นผู้นำเข้ามาในราชอาณาจักร ที่ตั้ง : </strong></p>
+            </div>
+            <div class="col-md-9">
+                <!-- <p style="font-family: K2D;">{{IdentifiesCtzNo}}</p> -->
+                <p style="font-family: K2D;">เลขที่ 999/99 หมู่ 9 ตรอก/ซอย เจริญสุข ถนน - ตำบล/แขวง ดอนกรวย อำเภอ/เขต ดำเนินสะดวก จังหวัด ราชบุรี รหัสไปรษณีย์ 70130</p>
+            </div>
+        </div>
+   
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p style="font-family: K2D;"><strong>โทรศัพท์ : </strong></p>
+                        </div>
+                        <div class="col-md-9">
+                            <p style="font-family: K2D;">โทรศัพท์ 032-345-216</p>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+   
+<!--      
+        <div class="card-footer text-center">
+            <a [routerLink]="['/permission/assign']" class="btn btn-outline-success" style="font-family:K2D;">กำหนดสิทธิ์ให้ผู้ประกอบการ</a>
+        </div> -->
+    </div>
+  </main>
+      <div class="four" style="margin-bottom: -16%;">
+         <button class="submit btn" (click)="personalInfoSubmit()">Next</button>
+      </div>
+    </div>
+    
+
+
+
+
+    <div class="container" *ngIf="addressComplete">
+      <!-- <div class="one">
+        <input type="text" 
+               class="input"
+               placeholder="55">
+      </div>
+      <div class="two">
+        <input type="text" 
+               class="input"
+               placeholder="Zip Code">
+      </div>
+      <div class="three">
+        <input type="text" 
+               class="input"
+               placeholder="City / State">
+      </div> -->
+   
+      <main role="main"  style="margin-top:10px;">
+        <div class="card-body">
+              <div class="card">
+                  <div class="card-header" style="font-family: K2D; background-color: #649568;"> 
+                      <strong>รายละเอียดและเอกสาร คำขอนำเข้ายา</strong>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p style="font-family: K2D;"><strong>1. วัตถุประสงค์การนำเข้า </strong></p>
+                        </div>
+                        <div class="col-md-9">
+                            <!-- <p style="font-family: K2D;">{{IdentifiesCtzNo}}</p> -->
+                            <p style="font-family: K2D;">โดยหน่วยงานของรัฐ สภากาชาดไทย และองค์การเภสัชกรรม</p>
+                        </div>
+                    </div>
+  
+                    <div class="row">
+                      <div class="col-md-3">
+                          <p style="font-family: K2D;"><strong>2. รายการยาที่ขอนำเข้า </strong></p>
+                      </div>
+                  </div>
+  
+                  <div class="row" style="margin-left:10px;">
+                    <div class="one">
+                      <div class="row">
+                     <div class="col-md-3">
+                      <strong >2.1 ชื่อยา</strong> 
+                    </div>               
+                      <div class="col-md-9 "  >
+                        <input type="text" class="input" placeholder="กรุณากรอกชื่อยา">
+                            </div>
+                     </div>
+                    </div>
+              </div>
+
+              <div class="row" style="margin-left:10px;">
+                <div class="one">
+                  <div class="row">
+                 <div class="col-md-3">
+                  <strong >ผู้ผลิตต่างประเทศ</strong> 
+                </div>               
+                  <div class="col-md-9 "  >
+                    <input type="text" class="input" placeholder="กรุณากรอกชื่อยา">
+                        </div>
+                 </div>
+                </div>
+          </div>
+
+          <div class="row" style="margin-top:15px; margin-left:10px;">
+            <div class="col-xs-12 col-12 col-sm-6 col-md-6 col-lg-6 form-group">
+             <label style="font-family: K2D;"><strong>ประเทศ</strong></label>
+            </div>
+            <div class="col-xs-12 col-12 col-sm-6 col-md-6 col-lg-6 form-group">
+              <select class="form-control"  style="font-family: K2D;">
+                <option>--กรุณาเลือกระบบ--</option>
+                <option *ngFor="let list of systemsData" value="{{list.IDnamesys}}">
+                    {{list.namesystem}}
+                </option>
+              </select>
+            </div>
+        </div>
+  
+        <div class="row" style="margin-left:10px;">
+          <div class="two">
+            <div class="row">
+           <div class="col-md-3">
+            <strong >ขนาดบรรจุ </strong> 
+          </div>               
+            <div class="col-md-4 "  >
+              <input type="number" class="input" placeholder="กรุณากรอกขนาดที่บรรจุ">
+                  </div>
+            <div class="col-md-4 " >
+              <select   class="form-control"  style="font-family: K2D;">
+                <option value="">--กรุณาเลือกหน่วย--</option>
+                <option *ngFor="let listdata of unitsData" [value]="listdata.Idunit" >{{listdata.Nameunit}}</option>
+              </select>
+            </div>
+           </div>
+          </div>
+    </div>
+
+
+    <div class="row" style="margin-left:10px;">
+      <div class="two">
+        <div class="row">
+       <div class="col-md-3">
+        <strong >จำนวนนำเข้า </strong> 
+      </div>               
+        <div class="col-md-4 "  >
+          <input type="number" class="input" placeholder="กรุณากรอกจำนวนที่นำเข้า">
+              </div>
+        <div class="col-md-4 " >
+          <select  class="form-control"  style="font-family: K2D;">
+            <option value="">--กรุณาเลือกหน่วย--</option>
+            <option *ngFor="let listdata of itemnumberData" [value]="listdata.IdItemnumber" >{{listdata.NameItem}}</option>
+          </select>
+        </div>
+       </div>
+      </div>
+</div>
+  
+<div class="row" style="margin-left:10px;">
+  <div class="one">
+    <div class="row">
+   <div class="col-md-3">
+    <strong >2.2 ตัวยาสำคัญ</strong> 
+  </div>               
+    <div class="col-md-9 "  >
+      <input type="text" class="input" placeholder="กรุณากรอกชื่อยา">
+   </div>
+   </div>
+  </div>
+</div>  
+
+
+
+<div class="container" style="margin-top: 5%" *ngIf="Showtable">    
+  <table class="table table-striped table-bordered">    
+      <thead>    
+          <tr>    
+              <th>Action</th>    
+              <th>Title 1</th>    
+              <th>Title 2</th>    
+              <th>Title 3</th>    
+          </tr>    
+      </thead>    
+      <tbody>    
+           <tr *ngFor="let dynamic of dynamicArray; let i = index;">    
+            <td (click)="deleteRow(i)">    
+              <i class="fa fa-trash fa-2x"></i>    
+            </td>    
+              <td>    
+                <input [(ngModel)]="dynamicArray[i].title1" class="form-control" type="text" />    
+              </td>    
+              <td>    
+                <input [(ngModel)]="dynamicArray[i].title2" class="form-control" type="text" />    
+              </td>    
+              <td>    
+                <input [(ngModel)]="dynamicArray[i].title3" class="form-control" type="text"/>    
+              </td>   
+              <button class="btn-info" (click)="TestFunction(dynamic)">บันทึก</button> 
+          </tr>    
+          <tr>    
+            <td (click)="addRow(i)">    
+              <i class="fa fa-plus fa-2x"></i>    
+            </td>    
+          </tr>    
+      </tbody>         
+  </table>    
+</div>  
+
+
+
+</div>
+</div>
+</div>
+  </main>
+
+      <div class="four">
+         <button class="submit" (click)="addressSubmit()">Next</button>
+      </div>
+    </div>
+    
+ 
+
+    
+    <div class="container" *ngIf="creditCardComplete">
+      <div class="one">
+               <div class="row">
+                <div class="col-md-12">
+                    <p style="font-family: K2D;"><strong>3. พร้อมคำขอนี้ข้าพเจ้า ได้แนบหลักฐานต่างๆ มาด้วย คือ  </strong></p>
+                </div>
+
+            </div>       
+      </div>
+
+      <div class="two" style="margin-left:10px;">
+        <div class="two">
+          <div class="row">
+         <div class="col-md-12">
+          <strong >3.1 หนังสือชี้แจงวัตถุประสงค์ของการนำเข้า พร้อมข้อความรับรองว่าจะใช้ยาที่นำเข้าอย่างระมัดระวังและจะดูแล ป้องกันมิให้เกิดอันตราย หรืออาการข้างเคียงร้ายแรงใดๆ ต่อผู้ป่วยที่ได้รับยาดังกล่าวอย่างใกล้ชิดและเข้มงวด จากผู้นำเข้า และมีการลงนามโดยผู้บริหารสูงสุดของหน่วยงานหรือผู้รับมอบอำนาจ
+
+          </strong> 
+        </div>               
+          <!-- <div class="col-md-9 "  >
+            <input type="text" class="input" placeholder="กรุณากรอกชื่อยา">
+                </div>
+         </div> -->
+        </div>
+  </div>
+
+
+  <div class="three">
+    <div class="row">
+   <div class="col-md-12">
+    <strong >3.2 สำเนาใบกำกับสินค้า (INVOICE) หรือสำเนาใบตราส่ง (AWB/BLU ใบแจ้งฯ) หรือเอกสารอื่น แล้วแต่กรณี
+
+    </strong> 
+  </div>               
+    <!-- <div class="col-md-9 "  >
+      <input type="text" class="input" placeholder="กรุณากรอกชื่อยา">
+          </div>
+   </div> -->
+  </div>
+</div>
+
+<div class="three">
+  <div class="row">
+ <div class="col-md-12">
+  <strong >3.3 ฉสาก และเอกสารกำกับยา 
+
+  </strong> 
+</div>               
+  <!-- <div class="col-md-9 "  >
+    <input type="text" class="input" placeholder="กรุณากรอกชื่อยา">
+        </div>
+ </div> -->
+</div>
+</div>
+
+<div class="three">
+  <div class="row">
+ <div class="col-md-12">
+  <strong >3.4 เอกสารแสดงคุณภาพมาตรฐาน ความปลอดภัย และประสิทธิผลของยาที่นำเข้า เช่น Certificate of Analysis 
+
+
+  </strong> 
+</div>               
+  <!-- <div class="col-md-9 "  >
+    <input type="text" class="input" placeholder="กรุณากรอกชื่อยา">
+        </div>
+ </div> -->
+</div>
+</div>
+
+
+<div class="three">
+  <div class="row">
+ <div class="col-md-12">
+  <strong >3.5 ข้อกำหนดเฉพาะของสินค้า (ถ้ามี)
+
+  </strong> 
+</div>               
+  <!-- <div class="col-md-9 "  >
+    <input type="text" class="input" placeholder="กรุณากรอกชื่อยา">
+        </div>
+ </div> -->
+</div>
+</div>
+
+
+<div class="three">
+  <div class="row">
+ <div class="col-md-12">
+  <strong >3.6 อื่นๆ (ถ้ามี) ข้าพเจ้าขอรับรองว่าจะนำยาไปใช้ตามวัตถุประสงค์ที่ขอนำเข้าเท่านั้น หากฝ่าฝืนยินดีให้ดำเนินการตามกฎหมาย
+  </strong> 
+</div>               
+  <!-- <div class="col-md-9 "  >
+    <input type="text" class="input" placeholder="กรุณากรอกชื่อยา">
+        </div>
+ </div> -->
+</div>
+</div>
+
+
+
+      <div class="four">
+         <button class="submit" (click)="creditCardSubmit()">Submit</button>
+      </div>
+    </div>
+    
+    <div class="thankYou" *ngIf="completedOrder">Thank You!<br>Your Order is Complete</div>
+    
+    
+    <!-- <div class="customerContactContainer">
+      <div class="nameTitle">Name</div>
+      <div class="emailTitle">Email</div>
+    </div> -->
+    
+<!--     
+    <div *ngIf="customer">
+      <div class="customerListItemsContainer">
+        <div class="name">{{name}}</div>
+        <div class="email">{{email}}</div>
+      </div>
+    </div> -->
+    
+    
+
+    
