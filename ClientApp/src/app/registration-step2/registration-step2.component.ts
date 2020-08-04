@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Userinfo, DynamicGrid } from '../models/userinfo';
- 
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { VERSION, MatGridTileHeaderCssMatStyler } from '@angular/material';
+import { Router } from '@angular/router';
+
  
 
 @Component({
@@ -23,7 +26,7 @@ export class RegistrationStep2Component implements OnInit {
 
   customer = false;
 
-
+  Sucess=false;
 
   customerInformation = [];
 
@@ -68,7 +71,15 @@ export class RegistrationStep2Component implements OnInit {
  dynamicArray: Array<DynamicGrid> = [];  
  newDynamic: any = {};  
 
-  constructor() { }
+ version = VERSION;
+ dateForm: FormGroup;
+
+ constructor(private fb: FormBuilder, private router: Router) {
+   this.createForm();
+ }
+
+ 
+ 
 
   ngOnInit(): void {
     console.log('Fruite' + this.fruite.push('banana'));
@@ -79,6 +90,7 @@ export class RegistrationStep2Component implements OnInit {
 
   }
 
+  
 
   addRow(index) {    
     this.newDynamic = {title1: "", title2: "",title3:""};  
@@ -132,6 +144,8 @@ deleteRow(index) {
     this.creditCardComplete = false;
     this.completedOrder = true;
     this.stepThree = true;
+    this.Sucess=true;
+    this.router.navigate([''])
   }
 
   Testarray: any = {};  
@@ -147,6 +161,12 @@ deleteRow(index) {
   }
 
   
+  
+  createForm() {
+    this.dateForm = this.fb.group({
+      datePickerInput: ['', [Validators.required]]
+    });
+  }
   
 }
 export interface UsersData {
